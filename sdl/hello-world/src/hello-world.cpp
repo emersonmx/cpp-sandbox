@@ -93,10 +93,10 @@ private:
     bool running_{true};
 };
 
-class HelloSDLApp : public Application {
+class HelloWorldApp : public Application {
 public:
     void create() override {
-        window_.create("Hello SDL", 640, 480);
+        window_.create("Hello World", 640, 480);
     }
 
     void destroy() override {
@@ -115,26 +115,26 @@ public:
     }
 
 private:
-    class SDLSystem {
+    class SDL {
         public:
-            SDLSystem() {
+            SDL() {
                 if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
                     throw SDLException("Couldn't start SDL");
                 }
                 std::cout << "SDL inited" << std::endl;
             }
 
-            virtual ~SDLSystem() {
+            virtual ~SDL() {
                 SDL_Quit();
                 std::cout << "SDL quitted" << std::endl;
             }
     };
 
-    SDLSystem sdlSystem_;
+    SDL sdl_;
     Window window_{};
 };
 
 int main() {
-    HelloSDLApp app;
+    HelloWorldApp app;
     return app.run();
 }

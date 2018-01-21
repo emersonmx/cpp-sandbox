@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(hello-sdl)
+project(hello-world)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -14,7 +14,7 @@ include_directories(${PROJECT_SOURCE_DIR}
 )
 
 add_executable(${PROJECT_NAME}
-    src/hello-sdl.cpp
+    src/hello-world.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
