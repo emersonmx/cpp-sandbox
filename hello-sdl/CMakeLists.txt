@@ -5,7 +5,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 
 include(FindPkgConfig)
-pkg_search_module(SDL2 REQUIRED sdl2 >= 2.0.0)
+pkg_search_module(SDL2 REQUIRED sdl2)
 pkg_search_module(SDL2IMAGE REQUIRED SDL2_image >= 2.0.0)
 
 include_directories(${PROJECT_SOURCE_DIR}

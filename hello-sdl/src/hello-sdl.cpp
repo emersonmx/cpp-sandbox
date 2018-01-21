@@ -70,12 +70,12 @@ class Application {
 public:
     virtual void create() {}
     virtual void destroy() {}
-    virtual void update() {}
+    virtual void tick() {}
 
     int run() {
         create();
         while (running_) {
-            update();
+            tick();
         }
 
         destroy();
@@ -93,7 +93,7 @@ private:
     bool running_{true};
 };
 
-class HelloSdlApp : public Application {
+class HelloSDLApp : public Application {
 public:
     virtual void create() override {
         window_.create("Hello SDL", 640, 480);
@@ -102,7 +102,7 @@ public:
     virtual void destroy() override {
     }
 
-    virtual void update() override {
+    virtual void tick() override {
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
@@ -135,6 +135,6 @@ private:
 };
 
 int main() {
-    HelloSdlApp app;
+    HelloSDLApp app;
     return app.run();
 }
