@@ -95,14 +95,14 @@ private:
 
 class HelloSDLApp : public Application {
 public:
-    virtual void create() override {
+    void create() override {
         window_.create("Hello SDL", 640, 480);
     }
 
-    virtual void destroy() override {
+    void destroy() override {
     }
 
-    virtual void tick() override {
+    void tick() override {
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
