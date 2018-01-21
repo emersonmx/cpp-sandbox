@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(hello-world)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 include(FindPkgConfig)
 pkg_search_module(SDL2 REQUIRED sdl2)
