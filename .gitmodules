@@ -1,0 +1,3 @@
+[submodule "sdl/pong/extlibs/mxg"]
+	path = sdl/pong/extlibs/mxg
+	url = https://github.com/emersonmx/mxg.git
