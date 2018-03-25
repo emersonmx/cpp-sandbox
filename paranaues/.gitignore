@@ -1,6 +1,7 @@
+/.tags
 /chrono_test
 /const_extends
-/vec_test
-/reference_test
 /loader_test
-/.tags
+/reference_test
+/smart_ptr_tests
+/vec_test
