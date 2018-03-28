@@ -43,6 +43,15 @@ endif()
 include(FindPkgConfig)
 include(ExternalProject)
 
+pkg_search_module(SDL2 REQUIRED sdl2)
+pkg_search_module(SDL2_IMAGE REQUIRED SDL2_image>=2.0.0)
+pkg_search_module(SDL2_TTF REQUIRED SDL2_ttf>=2.0.0)
+include_directories(
+    ${SDL2_INCLUDE_DIRS}
+    ${SDL2_IMAGE_INCLUDE_DIRS}
+    ${SDL2_TTF_INCLUDE_DIRS}
+)
+
 # Build settings
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
