@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-#include <mxg/sdl/Exception.hpp>
+#include <mxg/Exception.hpp>
 
 namespace mxg {
 namespace sdl {

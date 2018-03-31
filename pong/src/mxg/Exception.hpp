@@ -1,10 +1,9 @@
-#ifndef MXG_SDL_EXCEPTION_HPP_
-#define MXG_SDL_EXCEPTION_HPP_
+#ifndef MXG_EXCEPTION_HPP_
+#define MXG_EXCEPTION_HPP_
 
 #include <stdexcept>
 
 namespace mxg {
-namespace sdl {
 
 class Exception : public std::runtime_error {
 public:
@@ -12,6 +11,5 @@ public:
         : std::runtime_error(what) {}
 };
 
-} /* namespace sdl */
 } /* namespace mxg */
-#endif /* MXG_SDL_EXCEPTION_HPP_ */
+#endif /* MXG_EXCEPTION_HPP_ */
