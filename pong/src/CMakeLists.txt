@@ -1,6 +1,11 @@
+include_directories(
+    ${PROJECT_SOURCE_DIR}/src
+)
+
 # Targets
 add_library(mxg-sdl
     mxg/Size.cpp
+    mxg/Window.cpp
     mxg/sdl/Window.cpp
 )
 

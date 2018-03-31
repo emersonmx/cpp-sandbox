@@ -1,14 +1,12 @@
 #include <catch.hpp>
 
-#include <iostream>
-
 #include <utils.hpp>
-#include <mxg/sdl/Window.hpp>
+#include <mxg/Window.hpp>
 
 TEST_CASE("Windows can be created and closed", "[window]") {
     pong::initSystems();
 
-    mxg::sdl::Window window;
+    mxg::Window window;
 
     window.create("Test Window", {640, 480});
 

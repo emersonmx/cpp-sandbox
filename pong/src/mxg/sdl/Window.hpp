@@ -20,7 +20,6 @@ public:
 
     void create(const std::string& title, const Size& size);
     void close();
-    void display();
 
 private:
     SDL_Window* window_{};
