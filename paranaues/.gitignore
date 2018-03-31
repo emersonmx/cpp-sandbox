@@ -4,4 +4,5 @@
 /loader_test
 /reference_test
 /smart_ptr_tests
+/strbuf_test
 /vec_test
