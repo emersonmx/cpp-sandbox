@@ -1,10 +1,12 @@
 #include <catch.hpp>
 
-#include <utils.hpp>
-#include <mxg/Window.hpp>
+#include <SDL.h>
 
-TEST_CASE("Windows can be created and closed", "[window]") {
-    pong::initSystems();
+#include <mxg/Window.hpp>
+#include <mxg/Renderer.hpp>
+
+TEST_CASE("Windows can be used", "[window]") {
+    REQUIRE(SDL_Init(SDL_INIT_VIDEO) == 0);
 
     mxg::Window window;
 
@@ -28,5 +30,5 @@ TEST_CASE("Windows can be created and closed", "[window]") {
 
     window.close();
 
-    pong::quitSystems();
+    SDL_Quit();
 }

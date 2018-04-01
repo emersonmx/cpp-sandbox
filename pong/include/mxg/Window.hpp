@@ -8,6 +8,8 @@
 
 namespace mxg {
 
+class Renderer;
+
 class Window {
 public:
     Window();
@@ -25,6 +27,8 @@ public:
     void close();
 
 private:
+    friend Renderer;
+
     class Impl;
     std::unique_ptr<Impl> pimpl_;
 };

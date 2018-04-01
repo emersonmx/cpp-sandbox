@@ -1,8 +1,9 @@
 #include <mxg/Window.hpp>
 
+#include <mxg/Renderer.hpp>
+
 #if defined(USE_SDL_BACKEND)
 #include <mxg/sdl/Window.hpp>
-class mxg::Window::Impl : public mxg::sdl::Window {};
 #endif
 
 namespace mxg {

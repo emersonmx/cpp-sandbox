@@ -2,7 +2,7 @@ include(${PROJECT_SOURCE_DIR}/cmake/libs/catch.cmake)
 #include(${PROJECT_SOURCE_DIR}/cmake/libs/fakeit.cmake)
 
 # Tests
-file(GLOB SRCS *.cpp)
+file(GLOB SRCS _main.cpp *_test.cpp)
 
 include_directories(
     ${CATCH_INCLUDE_DIR}
@@ -22,6 +22,4 @@ target_link_libraries(${PROJECT_NAME}-tests
     mxg-sdl
 
     ${SDL2_LIBRARIES}
-    ${SDL2_IMAGE_LIBRARIES}
-    ${SDL2_TTF_LIBRARIES}
 )
