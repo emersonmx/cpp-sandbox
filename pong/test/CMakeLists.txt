@@ -17,11 +17,11 @@ add_executable(${PROJECT_NAME}-tests ${SRCS})
 add_dependencies(${PROJECT_NAME}-tests
     catch
     #fakeit
-    mxg-sdl
+    mxgsdl
 )
 
 target_link_libraries(${PROJECT_NAME}-tests
-    mxg-sdl
+    mxgsdl
 
     ${SDL2_LIBRARIES}
 )
