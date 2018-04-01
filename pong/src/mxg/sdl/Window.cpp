@@ -1,5 +1,6 @@
 #include <mxg/sdl/Window.hpp>
 
+#include <cassert>
 #include <sstream>
 
 #include <mxg/Exception.hpp>
@@ -15,13 +16,17 @@ bool Window::isOpen() const {
     return window_ != nullptr;
 }
 std::string Window::getTitle() const {
+    assert(window_ != nullptr);
+
     return SDL_GetWindowTitle(window_);
 }
 
 Size Window::getSize() const {
+    assert(window_ != nullptr);
+
     int width{}, height{};
     SDL_GetWindowSize(window_, &width, &height);
-    return Size{static_cast<float>(width), static_cast<float>(height)};
+    return Size{static_cast<real_t>(width), static_cast<real_t>(height)};
 }
 
 void Window::create(const std::string& title, const Size& size) {

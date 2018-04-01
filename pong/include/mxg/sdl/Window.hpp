@@ -4,7 +4,6 @@
 #include <string>
 
 #include <SDL_video.h>
-#include <SDL_render.h>
 
 #include <mxg/Size.hpp>
 

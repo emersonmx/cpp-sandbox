@@ -3,7 +3,6 @@
 #include <SDL.h>
 
 #include <mxg/sdl/Window.hpp>
-#include <mxg/sdl/Renderer.hpp>
 
 TEST_CASE("Windows can be used", "[window]") {
     REQUIRE(SDL_Init(SDL_INIT_VIDEO) == 0);
@@ -16,6 +15,12 @@ TEST_CASE("Windows can be used", "[window]") {
 
     window.create("Test Window", {640, 480});
 
+    SECTION("creating without call create results in undefined behavior") {
+        mxg::sdl::Window windowError{};
+        REQUIRE_FALSE(windowError.isOpen());
+        windowError.create("Test Window", {640, 480});
+        REQUIRE(windowError.isOpen());
+    }
     SECTION("creating changes open to true") {
         REQUIRE(window.isOpen() == true);
     }

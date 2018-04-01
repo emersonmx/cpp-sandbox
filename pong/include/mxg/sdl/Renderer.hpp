@@ -1,19 +1,22 @@
 #ifndef MXG_SDL_RENDERER_HPP_
 #define MXG_SDL_RENDERER_HPP_
 
-#include <SDL.h>
+#include <SDL_render.h>
 
 #include <mxg/Color.hpp>
-#include <mxg/sdl/Window.hpp>
 
 namespace mxg {
 namespace sdl {
 
 class Renderer {
 public:
+    Renderer() = default;
     Renderer(SDL_Window* window);
 
+    void create(SDL_Window* window);
+
     Color getClearColor() const;
+    void setClearColor(const Color& color);
 
     void clear();
     void clear(const Color& color);
