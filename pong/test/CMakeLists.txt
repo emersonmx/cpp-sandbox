@@ -2,13 +2,15 @@ include(${PROJECT_SOURCE_DIR}/cmake/libs/catch.cmake)
 #include(${PROJECT_SOURCE_DIR}/cmake/libs/fakeit.cmake)
 
 # Tests
-file(GLOB SRCS _main.cpp *_test.cpp)
+file(GLOB SRCS
+    _main.cpp
+    *_test.cpp
+    sdl/*_test.cpp
+)
 
 include_directories(
     ${CATCH_INCLUDE_DIR}
     #${FAKEIT_INCLUDE_DIR}
-
-    ${PROJECT_SOURCE_DIR}/src
 )
 
 add_executable(${PROJECT_NAME}-tests ${SRCS})

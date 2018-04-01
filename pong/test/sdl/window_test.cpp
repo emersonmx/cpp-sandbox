@@ -2,13 +2,17 @@
 
 #include <SDL.h>
 
-#include <mxg/Window.hpp>
-#include <mxg/Renderer.hpp>
+#include <mxg/sdl/Window.hpp>
+#include <mxg/sdl/Renderer.hpp>
 
 TEST_CASE("Windows can be used", "[window]") {
     REQUIRE(SDL_Init(SDL_INIT_VIDEO) == 0);
 
-    mxg::Window window;
+    mxg::sdl::Window window;
+
+    SECTION("open is false when instantiated") {
+        REQUIRE(window.isOpen() == false);
+    }
 
     window.create("Test Window", {640, 480});
 

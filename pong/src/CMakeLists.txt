@@ -5,9 +5,7 @@ include_directories(
 # Targets
 add_library(mxg-sdl
     mxg/Size.cpp
-    mxg/Window.cpp
     mxg/sdl/Window.cpp
-    mxg/Renderer.cpp
     mxg/sdl/Renderer.cpp
 )
 

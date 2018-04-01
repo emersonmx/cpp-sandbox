@@ -4,8 +4,6 @@
 #include <SDL.h>
 
 #include <mxg/Color.hpp>
-#include <mxg/Renderer.hpp>
-
 #include <mxg/sdl/Window.hpp>
 
 namespace mxg {
@@ -21,13 +19,12 @@ public:
     void clear(const Color& color);
     void present();
 
+    operator SDL_Renderer*() const { return renderer_; }
+
 private:
     SDL_Renderer* renderer_{};
 };
 
 } /* namespace sdl */
-
-class Renderer::Impl : public sdl::Renderer {};
-
 } /* namespace mxg */
 #endif /* MXG_SDL_RENDERER_HPP_ */
