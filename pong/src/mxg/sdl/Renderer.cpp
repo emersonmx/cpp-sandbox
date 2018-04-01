@@ -7,8 +7,8 @@
 namespace mxg {
 namespace sdl {
 
-Renderer::Renderer(const Window& window) {
-    renderer_ = SDL_CreateRenderer(window.getSDLWindow(), -1, SDL_RENDERER_ACCELERATED);
+Renderer::Renderer(SDL_Window* window) {
+    renderer_ = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (renderer_ == nullptr) {
         std::ostringstream message{};
         message << "Couldn't create renderer\n";

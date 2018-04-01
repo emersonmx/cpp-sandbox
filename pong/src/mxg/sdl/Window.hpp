@@ -24,7 +24,7 @@ public:
     void create(const std::string& title, const Size& size);
     void close();
 
-    SDL_Window* getSDLWindow() const { return window_; }
+    SDL_Window* getBackendWindow() const { return window_; }
 
 private:
     SDL_Window* window_{};

@@ -8,8 +8,7 @@
 namespace mxg {
 
 Renderer::Renderer(const Window& window)
-    : pimpl_{new Impl{*window.pimpl_}} {}
-    // : pimpl_{std::make_unique<Renderer::Impl>(*window.pimpl_)} {}
+    : pimpl_{new Impl{window.pimpl_->getBackendWindow()}} {}
 Renderer::~Renderer() = default;
 Renderer& Renderer::operator=(Renderer&&) = default;
 

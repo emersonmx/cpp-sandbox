@@ -13,7 +13,7 @@ namespace sdl {
 
 class Renderer {
 public:
-    Renderer(const Window& window);
+    Renderer(SDL_Window* window);
 
     Color getClearColor() const;
 
