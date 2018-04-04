@@ -1,7 +1,3 @@
-include_directories(
-    ${PROJECT_SOURCE_DIR}/src
-)
-
 # Targets
 add_library(mxgsdl
     mxg/Size.cpp
