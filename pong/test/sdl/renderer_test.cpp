@@ -19,10 +19,26 @@ TEST_CASE("Renderer can be used", "[renderer]") {
         renderer.create(window);
         REQUIRE(static_cast<SDL_Renderer*>(renderer) != nullptr);
     }
+    SECTION("destroy invalidates renderer") {
+        renderer.create(window);
+        REQUIRE(static_cast<SDL_Renderer*>(renderer) != nullptr);
+        renderer.destroy();
+        REQUIRE(static_cast<SDL_Renderer*>(renderer) == nullptr);
+    }
     SECTION("creating changes clear color to black") {
         renderer.create(window);
         mxg::Color color = renderer.getClearColor();
         REQUIRE(color.red == 0);
+        REQUIRE(color.green == 0);
+        REQUIRE(color.blue == 0);
+        REQUIRE(color.alpha == 255);
+    }
+    SECTION("clearing with color changes clear color") {
+        renderer.create(window);
+        renderer.clear({255, 0, 0});
+        renderer.present();
+        mxg::Color color = renderer.getClearColor();
+        REQUIRE(color.red == 255);
         REQUIRE(color.green == 0);
         REQUIRE(color.blue == 0);
         REQUIRE(color.alpha == 255);
@@ -36,12 +52,6 @@ TEST_CASE("Renderer can be used", "[renderer]") {
         REQUIRE(color.green == 0);
         REQUIRE(color.blue == 0);
         REQUIRE(color.alpha == 255);
-    }
-    SECTION("destroy invalidates renderer") {
-        renderer.create(window);
-        REQUIRE(static_cast<SDL_Renderer*>(renderer) != nullptr);
-        renderer.destroy();
-        REQUIRE(static_cast<SDL_Renderer*>(renderer) == nullptr);
     }
 
     window.close();
