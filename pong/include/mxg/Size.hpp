@@ -1,17 +1,17 @@
 #ifndef MXG_SIZE_HPP_
 #define MXG_SIZE_HPP_
 
-#include <mxg/defs.hpp>
+#include <cstdint>
 
 namespace mxg {
 
 class Size {
 public:
     Size() = default;
-    Size(real_t aWidth, real_t aHeight);
+    Size(uint32_t aWidth, uint32_t aHeight);
 
-    real_t width;
-    real_t height;
+    uint32_t width;
+    uint32_t height;
 };
 
 } /* namespace mxg */

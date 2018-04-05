@@ -26,7 +26,7 @@ Size Window::getSize() const {
 
     int width{}, height{};
     SDL_GetWindowSize(window_, &width, &height);
-    return Size{static_cast<real_t>(width), static_cast<real_t>(height)};
+    return Size{static_cast<uint32_t>(width), static_cast<uint32_t>(height)};
 }
 
 void Window::create(const std::string& title, const Size& size) {
