@@ -13,7 +13,6 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules" ${CMAKE_MODULE
 
 # Options
 option(BUILD_TESTS "Build tests" ON)
-option(USE_SDL_BACKEND "Use SDL backend" ON)
 
 # Compiler settings
 if (NOT CMAKE_BUILD_TYPE)
@@ -54,8 +53,6 @@ include_directories(
 )
 
 # Build settings
-add_definitions(-DUSE_SDL_BACKEND=${USE_SDL_BACKEND})
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_subdirectory(src)
