@@ -1,8 +1,2 @@
 /.tags
-/chrono_test
-/const_extends
-/loader_test
-/reference_test
-/smart_ptr_tests
-/strbuf_test
-/vec_test
+/*_test
