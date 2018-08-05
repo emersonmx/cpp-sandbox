@@ -1,0 +1,2 @@
+add_executable(chrono_test chrono_test.cpp)
+add_executable(const_extends_test const_extends_test.cpp)
