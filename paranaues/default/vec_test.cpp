@@ -31,5 +31,6 @@ int main() {
     Vector2 b{2, 2};
     Vector2 v = a / 2;
     std::cout << v.x << ", " << v.y << std::endl;
+    std::cout << b.x << ". " << b.y << std::endl;
     return 0;
 }

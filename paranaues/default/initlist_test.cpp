@@ -2,7 +2,7 @@
 
 class Color {
 public:
-    Color() 
+    Color()
         : r{0}, g{0}, b{0}, a{255} {}
     Color(const uint8_t ar, const uint8_t ag, const uint8_t ab)
         : r{ar}, g{ag}, b{ab}, a{255} {}

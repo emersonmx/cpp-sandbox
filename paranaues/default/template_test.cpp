@@ -3,29 +3,29 @@
 
 class A {
 public:
-    A(const std::string& s) : s(s) {}
-    void hello() { std::cout << "Hello from A - " << s << std::endl; }
+    A(const std::string& s) : s_(s) {}
+    void hello() { std::cout << "Hello from A - " << s_ << std::endl; }
 
 private:
-    std::string s;
+    std::string s_;
 };
 
 class B {
 public:
-    B(const std::string& s) : s(s) {}
-    void ola() { std::cout << "Olá do B - " << s << std::endl; }
+    B(const std::string& s) : s_(s) {}
+    void ola() { std::cout << "Olá do B - " << s_ << std::endl; }
 
 private:
-    std::string s;
+    std::string s_;
 };
 
 class C {
 public:
-    C(const std::string& s) : s(s) {}
-    void hola() { std::cout << "Hola do C - " << s << std::endl; }
+    C(const std::string& s) : s_(s) {}
+    void hola() { std::cout << "Hola do C - " << s_ << std::endl; }
 
 private:
-    std::string s;
+    std::string s_;
 };
 
 template <class T>

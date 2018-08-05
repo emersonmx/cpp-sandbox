@@ -6,7 +6,7 @@ class A {
 public:
     const int NUMBER = 0;
 
-    virtual ~A() {}
+    virtual ~A() = default;
 
     virtual void print() {
         std::cout << "A NUMBER: " << NUMBER << std::endl;

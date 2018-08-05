@@ -4,6 +4,8 @@ using namespace std;
 
 class A {
 public:
+    virtual ~A() = default;
+
     virtual void hello() {
         std::cout << "Hello world from A()" << std::endl;
     }

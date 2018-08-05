@@ -19,12 +19,15 @@ public:
 template<typename T>
 class Loader {
 public:
+    virtual ~Loader() = default;
+
     virtual std::unique_ptr<T> load(const std::string& filepath) = 0;
 };
 
 class TextureLoader : public Loader<Texture> {
 public:
     virtual std::unique_ptr<Texture> load(const std::string& filepath) {
+        std::cout << "Loading " << filepath << std::endl;
         return std::make_unique<Texture>();
     }
 };
