@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.11)
-project(paranaues LANGUAGES CXX)
+project(cpp_sandbox LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 
-set(paranaues_VERSION_MAJOR 0)
-set(paranaues_VERSION_MINOR 1)
-set(paranaues_VERSION_REVISION 0)
+set(cpp_sandbox_VERSION_MAJOR 0)
+set(cpp_sandbox_VERSION_MINOR 1)
+set(cpp_sandbox_VERSION_REVISION 0)
 
 # Configs
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Options
-option(BUILD_DEFAULT_PARANAUES "Build default paranaues" ON)
-option(BUILD_SDL_PARANAUES "Build SDL paranaues" ON)
+option(BUILD_DEFAULT_SANDBOX "Build default sandbox" ON)
+option(BUILD_SDL_SANDBOX "Build SDL sandbox" ON)
 
 # Compiler settings
 if (NOT CMAKE_BUILD_TYPE)
@@ -42,10 +42,10 @@ pkg_search_module(SDL2 REQUIRED sdl2)
 
 # Build settings
 
-if (BUILD_DEFAULT_PARANAUES)
+if (BUILD_DEFAULT_SANDBOX)
     add_subdirectory(default)
 endif()
 
-if (BUILD_SDL_PARANAUES)
+if (BUILD_SDL_SANDBOX)
     add_subdirectory(sdl)
 endif()
