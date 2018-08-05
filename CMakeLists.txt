@@ -11,7 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Options
 option(BUILD_DEFAULT_PARANAUES "Build default paranaues" ON)
-option(BUILD_SDL2_PARANAUES "Build SDL2 paranaues" ON)
+option(BUILD_SDL_PARANAUES "Build SDL paranaues" ON)
 
 # Compiler settings
 if (NOT CMAKE_BUILD_TYPE)
@@ -46,6 +46,6 @@ if (BUILD_DEFAULT_PARANAUES)
     add_subdirectory(default)
 endif()
 
-if (BUILD_SDL2_PARANAUES)
-    add_subdirectory(sdl2)
+if (BUILD_SDL_PARANAUES)
+    add_subdirectory(sdl)
 endif()
