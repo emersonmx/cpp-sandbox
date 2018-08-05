@@ -37,6 +37,9 @@ if (WIN32)
 endif()
 
 # Libs
+include(FindPkgConfig)
+pkg_search_module(SDL2 REQUIRED sdl2)
+
 # Build settings
 
 if (BUILD_DEFAULT_PARANAUES)
