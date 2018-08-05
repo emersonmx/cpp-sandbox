@@ -1,3 +1,5 @@
+add_subdirectory(hello-world)
+
 include_directories(smartptr_test
     ${SDL2_INCLUDE_DIRS}
 )
