@@ -24,7 +24,7 @@ public:
     void update(double delta) override;
     void render() override;
 
-private:
+protected:
     Engine* engine_;
 };
 
