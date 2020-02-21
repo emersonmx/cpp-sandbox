@@ -33,6 +33,7 @@ public:
     Engine();
 
     Settings getDefaultSettings() const;
+    Settings getSettings() const;
     void updateSettings(Settings settings);
 
     void setMainLoop(MainLoop& loop);

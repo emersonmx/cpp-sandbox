@@ -34,6 +34,8 @@ Engine::Settings Engine::getDefaultSettings() const
     };
 }
 
+Engine::Settings Engine::getSettings() const { return settings_; }
+
 void Engine::updateSettings(Settings settings) { settings_ = settings; }
 
 void Engine::setMainLoop(MainLoop& loop) { loop_ = &loop; }
