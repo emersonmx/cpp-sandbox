@@ -77,9 +77,14 @@ double Engine::getFixedUpdateDelta() const
 
 void Engine::initialize()
 {
-    SDL_Init(SDL_INIT_EVERYTHING);
-
     SDL_LogSetAllPriority(SDL_LOG_PRIORITY_INFO);
+
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
+        SDL_LogError(SDL_LOG_CATEGORY_SYSTEM,
+            "Couldn't initialize SDL\n\tError: %s\n", SDL_GetError());
+        running_ = false;
+        return;
+    }
 
     running_ = setupWindow() && setupRenderer();
 }
