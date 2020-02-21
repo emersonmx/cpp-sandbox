@@ -49,7 +49,7 @@ void Engine::run()
     initialize();
 
     double lastCount = timer::getTicksInSeconds();
-    double delta = getFixedUpdateDelta();
+    double delta = 0.0;
     while (running_) {
         double now = timer::getTicksInSeconds();
         delta = now - lastCount;
